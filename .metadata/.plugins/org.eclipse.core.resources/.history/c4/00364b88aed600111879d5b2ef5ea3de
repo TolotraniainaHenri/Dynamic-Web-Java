@@ -1,0 +1,37 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+    request.setCharacterEncoding("UTF-8");
+
+    String str = request.getParameter("number");
+    // double number = Double.parseDouble(str);
+      int number = Integer.parseInt(str);
+   
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>resultat</title>
+</head>
+<body>
+	<h1>Table de multiplication de <%= number %> : </h1><br>
+		<table border="2">
+		<thead> 
+			 <tr>
+			 	<th>N</th>
+			 	<th>i</th>
+			 	<th>R</th>
+			 </tr>
+		</thead>
+		<tbody>
+			<%  for (int i=0; i<= number; i++ ){
+				out.println("<tr><td>" + number +"<td><td>" + i +"<td><td>" + number * i +"<td><tr>");
+			}
+			%>
+			
+		</tbody>
+	</table>
+	<%  %>
+</body>
+</html>

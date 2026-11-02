@@ -1,0 +1,31 @@
+
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%
+    request.setCharacterEncoding("UTF-8");
+
+    String nom = request.getParameter("nom");
+    String prenom = request.getParameter("prenom");
+    String email = request.getParameter("email");
+    String age = request.getParameter("age");
+    String sexe = request.getParameter("sexe");
+%>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Résultat du formulaire</title>
+</head>
+<body>
+
+    <h2>Informations reçues</h2>
+
+    <p>Nom : <% System.out.println( nom); %></p>
+    <p>Prénom : <%= prenom %></p>
+    <p>Email : <%= email %></p>
+    <p>Sexe : <%= sexe %></p>
+
+    <br>
+    <a href="index.jsp">Retour au formulaire</a>
+
+</body>
+</html>
