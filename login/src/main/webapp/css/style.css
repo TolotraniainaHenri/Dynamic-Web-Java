@@ -1,0 +1,222 @@
+
+/* ==============================
+   RESET GENERAL
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+
+    background:
+        radial-gradient(circle at top left, #242424, transparent 40%),
+        radial-gradient(circle at bottom right, #1b1b1b, transparent 40%),
+        #080808;
+
+    color: #ffffff;
+}
+
+/* ==============================
+   CARTE DE CONNEXION
+============================== */
+
+.container {
+    width: 100%;
+    max-width: 420px;
+    padding: 45px 38px;
+
+    background: linear-gradient(145deg, #191919, #101010);
+
+    border: 1px solid #303030;
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.7),
+        0 0 25px rgba(212, 175, 55, 0.05);
+
+    animation: apparition 0.6s ease;
+}
+
+/* ==============================
+   TITRE
+============================== */
+
+.container h2 {
+    text-align: center;
+    font-size: 29px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    margin-bottom: 12px;
+
+    color: #ffffff;
+}
+
+.container h2::after {
+    content: "";
+    display: block;
+
+    width: 55px;
+    height: 3px;
+
+    margin: 15px auto 30px;
+
+    background: #d4af37;
+    border-radius: 10px;
+}
+
+/* ==============================
+   CHAMPS DE SAISIE
+============================== */
+
+input {
+    width: 100%;
+    padding: 15px 16px;
+    margin-bottom: 18px;
+
+    background: #242424;
+    color: #ffffff;
+
+    border: 1px solid #383838;
+    border-radius: 9px;
+
+    font-size: 14px;
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+input::placeholder {
+    color: #888888;
+}
+
+input:focus {
+    border-color: #d4af37;
+
+    box-shadow:
+        0 0 0 3px rgba(212, 175, 55, 0.10);
+
+    background: #292929;
+}
+
+/* ==============================
+   BOUTON
+============================== */
+
+button {
+    width: 100%;
+    padding: 15px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: linear-gradient(135deg, #d4af37, #aa8420);
+
+    color: #080808;
+
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #f0ce65, #c49b2e);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* ==============================
+   LIENS
+============================== */
+
+.liens {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.liens p {
+    color: #999999;
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+.liens a,
+.container > a {
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.liens a:hover,
+.container > a:hover {
+    color: #ffe18a;
+    text-decoration: underline;
+}
+
+/* ==============================
+   MESSAGE D'ERREUR
+============================== */
+
+.erreur {
+    padding: 12px;
+    margin-bottom: 20px;
+
+    color: #ff7777;
+    background: rgba(255, 50, 50, 0.08);
+
+    border: 1px solid rgba(255, 80, 80, 0.25);
+    border-radius: 8px;
+
+    font-size: 13px;
+    text-align: center;
+}
+
+/* ==============================
+   ANIMATION
+============================== */
+
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 480px) {
+    .container {
+        width: calc(100% - 30px);
+        padding: 35px 24px;
+    }
+
+    .container h2 {
+        font-size: 25px;
+    }
+}

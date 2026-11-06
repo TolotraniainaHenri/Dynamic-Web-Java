@@ -1,0 +1,15 @@
+LoginSecure/
+│
+├── Java Resources/
+│
+├── WebContent/
+    ├── login.jsp
+    ├── home.jsp
+    ├── logout.jsp
+    │
+    ├── css/
+    │   └── style.css
+    │
+    └── WEB-INF/
+        └── web.xml
+        └── users.csv
